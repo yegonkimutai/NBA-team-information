@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { getTeams } from "../redux/team/teamSlice";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import './Teams.css';
 
 
 const Teams = () => {
@@ -22,15 +23,20 @@ const Teams = () => {
     const filtered = teams.filter((team) => team.id)
 
     return(
-        <div>
-            <h1>Team List</h1>
+        <>
+            <h1>NBA Teams List</h1>
+        <div className="main-page">
             {filtered.map((team) => (
-                <div key={team.id} onClick={() => switchPage(team)}>
+                <div key={team.id} 
+                onClick={() => switchPage(team)}
+                className="teams-container"
+                >
                     <h2>{team.full_name}</h2>
                     <p>{team.abbreviation}</p>
                 </div>
             ))}
         </div>
+        </>
     )
 }
 

@@ -1,0 +1,29 @@
+.main-page {
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-left: 2%;
+    font-size: 2.5rem;
+}
+
+.teams-container{ 
+    border: 1px solid black;
+    padding:  1rem;
+    border-collapse: collapse;
+}
+
+@media (max-width:600px) {
+    .main-page {
+        display: grid;
+        grid-template-columns: 45% 45%;
+    }
+
+    .teams-container {
+        border: none;
+        padding: .5rem;
+    }
+}
