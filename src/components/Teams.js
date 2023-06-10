@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { getTeams } from "../redux/team/teamSlice";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { BsArrowRightCircle } from 'react-icons/bs';
 import './Teams.css';
 
 
@@ -33,6 +34,7 @@ const Teams = () => {
                 >
                     <h2>{team.full_name}</h2>
                     <p>{team.abbreviation}</p>
+                    <p className="arrow-icon"><BsArrowRightCircle /></p>
                 </div>
             ))}
         </div>
